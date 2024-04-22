@@ -16,6 +16,7 @@ const Navbar: React.FC = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  // nav items for medium and large device 
   const navItems = <>
     <li>
       <Link to={"/"}>Swap</Link>
@@ -63,6 +64,37 @@ const Navbar: React.FC = () => {
     </li>
   </>
 
+  // nav items for mobile menu
+  const navItemsMobile = <>
+    <li>
+      <Link className="block px-4 py-2 text-sm bg-[#1E1E1E] rounded-lg border-l-4 border-[#7D7D7D] hover:text-[#7D7D7D]" to={"/"}>Swap</Link>
+    </li>
+    <li>
+      <Link className="block px-4 py-2 text-sm bg-[#1E1E1E] rounded-lg border-l-4 border-[#7D7D7D] hover:text-[#7D7D7D]" to={"/"}>Dashboard</Link>
+    </li>
+    <li>
+      <Link className="block px-4 py-2 text-sm bg-[#1E1E1E] rounded-lg border-l-4 border-[#7D7D7D] hover:text-[#7D7D7D]" to={"/"}>Liquidity</Link>
+    </li>
+    <li>
+      <Link className="block px-4 py-2 text-sm bg-[#1E1E1E] rounded-lg border-l-4 border-[#7D7D7D] hover:text-[#7D7D7D]" to={"/"}>Vote</Link>
+    </li>
+    <li>
+      <Link className="block px-4 py-2 text-sm bg-[#1E1E1E] rounded-lg border-l-4 border-[#7D7D7D] hover:text-[#7D7D7D]" to={"/"}>Lock</Link>
+    </li>
+    <li>
+      <Link className="block px-4 py-2 text-sm bg-[#1E1E1E] rounded-lg border-l-4 border-[#7D7D7D] hover:text-[#7D7D7D]" to={"/"}>Lock</Link>
+    </li>
+    <li>
+      <Link className="block px-4 py-2 text-sm bg-[#1E1E1E] rounded-lg border-l-4 border-[#7D7D7D] hover:text-[#7D7D7D]" to={"/"}>Incentives</Link>
+    </li>
+    <li>
+      <Link className="block px-4 py-2 text-sm bg-[#1E1E1E] rounded-lg border-l-4 border-[#7D7D7D] hover:text-[#7D7D7D]" to={"/"}>Launchpad</Link>
+    </li>
+    <li>
+      <Link className="block px-4 py-2 text-sm bg-[#1E1E1E] rounded-lg border-l-4 border-[#7D7D7D] hover:text-[#7D7D7D]" to={"/"}>Seekers</Link>
+    </li>
+  </>
+
   return (
     <nav className="border-b border-[#2b2b2b] py-4">
       <div className="w-full mx-auto px-6">
@@ -103,13 +135,11 @@ const Navbar: React.FC = () => {
           {/* Mobile Menu */}
           {isMobileMenuOpen && (
             <div className="md:hidden absolute top-0 inset-x-0 p-2 transition transform origin-top-right">
-              <div className="rounded-lg shadow-lg bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
+              <div className="rounded-lg shadow-l text-white ring-1 ring-black ring-opacity-5 overflow-hidden">
                 <div className="px-5 pt-4 flex items-center justify-between">
-                  <div>
-                    <span className="text-white font-semibold text-xl">Logo</span>
-                  </div>
+                  <div></div>
                   <div className="-mr-2">
-                    <button onClick={toggleMobileMenu} type="button" className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
+                    <button onClick={toggleMobileMenu} type="button" className="bg-black rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
                       <span className="sr-only">Close menu</span>
                       <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
@@ -117,9 +147,9 @@ const Navbar: React.FC = () => {
                     </button>
                   </div>
                 </div>
-                <div className="px-2 pt-2 pb-3 space-y-1">
-                  <ul>
-                    {navItems}
+                <div className="px-2 pt-2 pb-3 mt-5 bg-black">
+                  <ul className='space-y-2 z-10'>
+                    {navItemsMobile}
                   </ul>
                 </div>
               </div>
