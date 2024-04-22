@@ -25,7 +25,7 @@ export default function Features() {
           <div key={index} className="flex items-center border border-[#1e1e1e] rounded-xl p-6">
             <h3 className="flex-1 text-[15px] italic text-white">{feature.text}</h3>
             <div className="ml-4">
-              <img src={`${feature.icon}`} alt={feature.text} className="h-6 w-6" />
+              <img src={`${feature.icon}`} alt={feature.text} className="h-6 w-6 drag-none" />
             </div>
           </div>
         ))}
