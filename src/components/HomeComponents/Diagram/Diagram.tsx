@@ -8,7 +8,7 @@ export default function Diagram() {
         <p className='text-[#cfcfcf]'>Crafted to incentivize contributors fostering the sustainable expansion of the protocol.</p>
       </div>
       <div>
-        <img className='mx-auto mt-14' src={DIAGRAM} alt="" />
+        <img className='mx-auto mt-14 drag-none' src={DIAGRAM} alt="" />
       </div>
     </div>
   )
