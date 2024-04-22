@@ -1,6 +1,7 @@
 import Banner from "../../components/HomeComponents/Banner/Banner";
 import Diagram from "../../components/HomeComponents/Diagram/Diagram";
 import Features from "../../components/HomeComponents/Features/Features";
+import Onboarding from "../../components/HomeComponents/Onboarding/Onboarding";
 
 
 export default function Home() {
@@ -9,6 +10,7 @@ export default function Home() {
       <Banner />
       <Features />
       <Diagram />
+      <Onboarding />
     </div>
   )
 }
