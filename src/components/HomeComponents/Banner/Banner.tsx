@@ -3,10 +3,10 @@ import DOWN_ARROW from '../../../assets/down-arrow.png'
 
 export default function Banner() {
   return (
-    <div className='text-center py-24'>
+    <div className='text-center py-24 px-3 lg:px-0'>
       <div className='max-w-[650px] mx-auto space-y-10 mb-14'>
         <h3 className="uppercase text-[#CFCFCF]">Welcome to MONISWAP</h3>
-        <h2 className="text-5xl italic text-[#fff]">The central hub for trading & liquidity marketplace on 🐻 Berachain</h2>
+        <h2 className="text-4xl md:text-5xl italic text-[#fff]">The central hub for trading & liquidity marketplace on 🐻 Berachain</h2>
         <img className='mx-auto' src={SWAP_CIRCLE} alt="" />
         <img className='mx-auto' src={DOWN_ARROW} alt="" />
       </div>
