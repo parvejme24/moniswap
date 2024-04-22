@@ -32,6 +32,35 @@ const Navbar: React.FC = () => {
     <li>
       <Link to={"/"}>Lock</Link>
     </li>
+    {/* dropdown item  */}
+    <li className="relative">
+      <button onClick={toggleDropdown}>
+        More
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 inline-block ml-1 -mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+      {/* Dropdown Content */}
+      {isDropdownOpen && (
+        <ul className="absolute mt-2 w-40 left-0 rounded-md shadow-lg z-10 space-y-2">
+          <li>
+            <Link to={''} className="block px-4 py-2 text-sm bg-[#1E1E1E] rounded-lg border-l-4 border-[#7D7D7D] hover:text-[#7D7D7D]">
+              Incentives
+            </Link>
+          </li>
+          <li>
+            <Link to={''} className="block px-4 py-2 text-sm bg-[#1E1E1E] rounded-lg border-l-4 border-[#7D7D7D] hover:text-[#7D7D7D]">
+              Incentives
+            </Link>
+          </li>
+          <li>
+            <Link to={''} className="block px-4 py-2 text-sm bg-[#1E1E1E] rounded-lg border-l-4 border-[#7D7D7D] hover:text-[#7D7D7D]">
+              Incentives
+            </Link>
+          </li>
+        </ul>
+      )}
+    </li>
   </>
 
   return (
@@ -50,36 +79,6 @@ const Navbar: React.FC = () => {
           <div className="hidden md:flex flex-grow justify-center">
             <ul className="flex space-x-6 items-center text-[#cfcfcf]">
               {navItems}
-
-              {/* More Dropdown */}
-              <li className="relative">
-                <button onClick={toggleDropdown} className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-                  More
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 inline-block ml-1 -mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </button>
-                {/* Dropdown Content */}
-                {isDropdownOpen && (
-                  <ul className="absolute mt-2 w-40 left-0 bg-gray-800 rounded-md shadow-lg z-10">
-                    <li>
-                      <a href="#" className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700">
-                        Incentives
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700">
-                        Launchpad
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700">
-                        Seekers
-                      </a>
-                    </li>
-                  </ul>
-                )}
-              </li>
             </ul>
           </div>
 
@@ -88,7 +87,7 @@ const Navbar: React.FC = () => {
 
             <div className='flex items-center gap-3'>
               <button className='bg-[#3E3831] p-4 rounded-lg'>
-                <img src={CHAIN} alt="" />
+                <img className='drag-none' src={CHAIN} alt="" />
               </button>
               <button className='py-3 px-6 rounded-lg bg-gradient-to-r from-[#ffbf60] to-[#fcb415] text-white'>Contact</button>
             </div>
