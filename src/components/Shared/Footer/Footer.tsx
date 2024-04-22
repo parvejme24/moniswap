@@ -1,8 +1,7 @@
-import React from 'react'
 
-export default function v() {
+
+export default function Footer() {
   return (
-    <div>v</div>
+    <div>Footer</div>
   )
 }
- 
