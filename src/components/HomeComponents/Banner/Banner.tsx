@@ -1,5 +1,6 @@
-import SWAP_CIRCLE from '../../../assets/swap-circle.png'
 import DOWN_ARROW from '../../../assets/down-arrow.png'
+import ROCKET from '../../../assets/rocket.png'
+
 
 export default function Banner() {
   return (
@@ -7,7 +8,13 @@ export default function Banner() {
       <div className='max-w-[650px] mx-auto space-y-10 mb-14'>
         <h3 className="uppercase text-[#CFCFCF]">Welcome to MONISWAP</h3>
         <h2 className="text-4xl md:text-5xl italic text-[#fff]">The central hub for trading & liquidity marketplace on 🐻 Berachain</h2>
-        <img className='mx-auto' src={SWAP_CIRCLE} alt="" />
+        <div className='w-32 h-32 mx-auto rounded-full bg-gradient-to-b from-[#ffbf60] to-[#fcb415] flex items-center justify-center'>
+          <div>
+            <img className='mx-auto mb-2' src={ROCKET} alt="" />
+            <span className='text-white'>Swap</span>
+          </div>
+        </div>
+
         <img className='mx-auto' src={DOWN_ARROW} alt="" />
       </div>
       <div className='max-w-[700px] mx-auto'>
