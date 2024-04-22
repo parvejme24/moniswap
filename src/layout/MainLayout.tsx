@@ -5,10 +5,10 @@ import Footer from "../components/Shared/Footer/Footer";
 
 export default function MainLayout() {
     return (
-        <div>
+        <>
             <Navbar />
             <Outlet />
             <Footer />
-        </div>
+        </>
     )
 }
